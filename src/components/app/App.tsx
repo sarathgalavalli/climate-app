@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
-import axios from 'axios';
-import './App.css';
+import React, { useState } from "react";
+import axios from "axios";
+import "./App.css";
+import weather from '../../assets/weather.png'
 
 function App() {
   const [data, setData] = useState({});
@@ -24,6 +25,10 @@ function App() {
 
   return (
     <div className="app">
+      <div className="nav-bar">
+        <img src={weather} alt="loading"/>
+        <h2>{"Weather"}</h2>
+        </div>
       <div className="header">
         <div className="search">
           <input
