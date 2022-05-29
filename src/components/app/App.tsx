@@ -61,7 +61,7 @@ function App() {
       )}
       {!data && (
         <div className="default-data">
-          'Please Enter Latitude and longitude values of a region'
+          Please Enter Latitude and longitude values of a region.
         </div>
       )}
     </div>
