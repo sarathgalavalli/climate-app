@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
 import { Widgets } from "../widgets/Widgets";
@@ -57,7 +57,7 @@ function App() {
             H: {data?.main?.temp_max} L: {data?.main?.temp_min}
           </div>
 
-          <Widgets data={data}/>
+          <Widgets data={data} />
         </div>
       )}
     </div>
