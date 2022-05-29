@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import axios from "axios";
 import "./App.css";
@@ -18,9 +19,9 @@ function App() {
           setData(res.data);
           console.log("data", res.data);
         })
-        .catch((e) => {
+        .catch(() => {
           alert(
-            `Couldn't find a region with given latitude and longitude details`
+            `Couldn't find a region with given latitude and longitude details`,
           );
         });
       setLatitude("");
@@ -56,8 +57,12 @@ function App() {
             <h4>Feels like: {data?.main?.feels_like}&#176;</h4>
             H: {data?.main?.temp_max} L: {data?.main?.temp_min}
           </div>
-
           <Widgets data={data} />
+        </div>
+      )}
+      {!data && (
+        <div className="default-data">
+          'Please Enter Latitude and longitude values of a region'
         </div>
       )}
     </div>

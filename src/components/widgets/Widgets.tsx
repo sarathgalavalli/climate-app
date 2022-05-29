@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import { Widget } from "../widget/Widget";
 import "./Widgets.css";
@@ -29,7 +30,7 @@ export const Widgets = (props: React.PropsWithChildren<WidgetsProps>) => {
       </Widget>
 
       <Widget header="Country">
-        <div>Country: {data?.sys?.country}</div>
+        <div>Country Code: {data?.sys?.country}</div>
         <div>Sunset: {data?.sys?.sunrise}</div>
         <div>Sunrise: {data?.sys?.sunset}</div>
       </Widget>
