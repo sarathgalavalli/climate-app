@@ -17,7 +17,6 @@ function App() {
         .get(url)
         .then((res) => {
           setData(res.data);
-          console.log("data", res.data);
         })
         .catch(() => {
           alert(
