@@ -1,0 +1,5 @@
+weather - main / desc
+wind - deg, speed, gust
+other- humidity, pressure, sea-level
+
+temp, feels like, temp low high
