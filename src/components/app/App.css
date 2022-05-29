@@ -128,31 +128,8 @@ h4 {
   margin-top: 15px;
 }
 
-.widget {
-  width: 100%;
-}
-
-.widget-content {
-  margin: 20px;
-  color: black;
-  background-color: white;
-  min-height: 150px;
-  opacity: 0.5;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-
 .widgets {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 35px;
-}
-
-.widget-header {
-  display: flex;
-  justify-content: center;
 }

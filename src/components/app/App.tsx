@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
-import weather from "../../assets/weather.png";
+import { Widgets } from "../widgets/Widgets";
 
 function App() {
-  const [data, setData] = useState<any>({});
+  const [data, setData] = useState<any>(undefined);
 
   const [longitude, setLongitude] = useState("");
   const [latitude, setLatitude] = useState("");
@@ -26,7 +26,7 @@ function App() {
       setLatitude("");
       setLongitude("");
     } else {
-      console.log("need both latitude and longitude to search");
+      alert(`Please Enter both latitude and longitude to search`);
     }
   };
 
@@ -57,51 +57,7 @@ function App() {
             H: {data?.main?.temp_max} L: {data?.main?.temp_min}
           </div>
 
-          <div className="widgets">
-            <div className="widget">
-            <div className="widget-header">
-                <h4>Terrain</h4>
-              </div>
-              <div className="widget-content">
-              <div>Type: {data?.weather[0]?.main}</div>
-              <div>Description: {data?.weather[0]?.description}</div>
-              </div>
-            </div>
-
-            <div className="widget">
-            <div className="widget-header">
-                <h4>Weather</h4>
-              </div>
-              <div className="widget-content">
-              <div>Humidity: {data?.main?.humidity}</div>
-              <div>Pressure:{data?.main?.pressure}</div>
-              <div>Sea Level: {data?.main?.sea_level}</div>
-              <div>Ground: Level: {data?.main?.grnd_level}</div>
-              </div>
-            </div>
-
-            <div className="widget">
-              <div className="widget-header">
-                <h4>Wind</h4>
-              </div>
-              <div className="widget-content">
-                <div>Speed: {data?.wind?.speed} kmph</div>
-                <div>Deg: {data?.wind?.deg}&#176;</div>
-                <div>Gust: {data?.wind?.gust} mph</div>
-              </div>
-            </div>
-
-            <div className="widget">
-            <div className="widget-header">
-                <h4>Country</h4>
-              </div>
-              <div className="widget-content">
-              <div>Country: {data?.sys?.country}</div>
-              <div>Sunset: {data?.sys?.sunrise}</div>
-              <div>Sunrise: {data?.sys?.sunset}</div>
-              </div>
-            </div>
-          </div>
+          <Widgets data={data}/>
         </div>
       )}
     </div>

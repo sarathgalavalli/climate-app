@@ -1,0 +1,31 @@
+.widget {
+  width: 100%;
+}
+
+.widget-content {
+  margin: 20px;
+  color: black;
+  background-color: white;
+  min-height: 150px;
+  height: 70%;
+  opacity: 0.5;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.widget-header {
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+  margin: 20px;
+}
